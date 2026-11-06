@@ -11,8 +11,7 @@ public class Main {
         System.out.println("---------------------------------------------");
 
         System.out.println("Your Adventure begins..." + username);
-        Player playerDetails = new Player(username, 100, 20, 50, 0, 1);
-        Enemy enemyDetails = new Enemy("Goblin", 50, 10);
+        Player playerDetails = new Player(username, 100, 20, 50, 0, 1, 100);
         System.out.println();
 
         boolean isRunning = true;
@@ -26,6 +25,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    Enemy enemyDetails = new Enemy("Goblin", 50, 10);
                     Battle.case1(playerDetails, enemyDetails, input);
                     break;
                 case 2:

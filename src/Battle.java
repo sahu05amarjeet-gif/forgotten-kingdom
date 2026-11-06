@@ -33,6 +33,14 @@ public class Battle {
             playerBattle(playerDetails, enemyDetails);
             if (enemyDetails.getHealth() <= 0) {
                 System.out.println(playerDetails.getName() + " won the dual");
+                playerDetails.addXP(50);
+                playerDetails.addGold(20);
+                System.out.println("==== REWARDS ====");
+                System.out.println("XP earned : 50");
+                System.out.println("Gold earned: 20");
+                System.out.println("Current XP: " + playerDetails.getXp());
+                System.out.println("Current Gold: " + playerDetails.getGold());
+                System.out.println("Current level: " + playerDetails.getLevel());
                 break;
             }
             enemyBattle(playerDetails, enemyDetails);
